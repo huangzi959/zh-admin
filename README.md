@@ -1,42 +1,42 @@
-# zh-Admin Dashboard
+# zh-Admin 仪表盘
 
-Admin Dashboard UI crafted with Shadcn and Vite. Built with responsiveness and accessibility in mind.
+基于 Shadcn 与 Vite 打造的后台管理仪表盘 UI，在设计时充分考虑了响应式布局与无障碍访问。
 
-![alt text](public/images/shadcn-admin.png)
+![示意图](public/images/shadcn-admin.png)
 
-[![Sponsored by Clerk](https://img.shields.io/badge/Sponsored%20by-Clerk-5b6ee1?logo=clerk)](https://go.clerk.com/GttUAaK)
+[![由 Clerk 赞助](https://img.shields.io/badge/Sponsored%20by-Clerk-5b6ee1?logo=clerk)](https://go.clerk.com/GttUAaK)
 
-I've been creating dashboard UIs at work and for my personal projects. I always wanted to make a reusable collection of dashboard UI for future projects; and here it is now. While I've created a few custom components, some of the code is directly adapted from ShadcnUI examples.
+我在工作和个人的项目中一直都在做仪表盘类的 UI。我一直想做一套可复用的仪表盘 UI 组件库，方便以后的项目直接使用；现在它终于完成了。虽然我自己编写了一些自定义组件，但其中部分代码是直接参考 ShadcnUI 官方示例改编而来的。
 
-> This is not a starter project (template) though. I'll probably make one in the future.
+> 不过，这并不是一个 starter 项目（模板）。将来我可能会单独做一个模板版本。
 
-## Features
+## 功能特性
 
-- Light/dark mode
-- Responsive
-- Accessible
-- With built-in Sidebar component
-- Global search command
-- 10+ pages
-- Extra custom components
-- RTL support
+- 明亮 / 暗黑模式
+- 响应式布局
+- 无障碍访问支持
+- 内置 Sidebar（侧边栏）组件
+- 全局搜索命令
+- 10+ 个页面
+- 额外的自定义组件
+- RTL（从右到左）语言支持
 
 <details>
-<summary>Customized Components (click to expand)</summary>
+<summary>自定义组件（点击展开）</summary>
 
-This project uses Shadcn UI components, but some have been slightly modified for better RTL (Right-to-Left) support and other improvements. These customized components differ from the original Shadcn UI versions.
+本项目使用了 Shadcn UI 组件，但其中部分组件为了更好地支持 RTL（从右到左）以及其它改进，做了轻微修改。这些自定义组件与原版 Shadcn UI 有所不同。
 
-If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest add <component>`), it's generally safe for non-customized components. For the listed customized ones, you may need to manually merge changes to preserve the project's modifications and avoid overwriting RTL support or other updates.
+如果你想通过 Shadcn CLI 更新组件（例如 `npx shadcn@latest add <component>`），对于未自定义过的组件来说通常是安全的。但对于下方列出的已自定义组件，你可能需要手动合并改动，以保留项目中的修改，并避免覆盖 RTL 支持或其它更新。
 
-> If you don't require RTL support, you can safely update the 'RTL Updated Components' via the Shadcn CLI, as these changes are primarily for RTL compatibility. The 'Modified Components' may have other customizations to consider.
+> 如果你不需要 RTL 支持，可以放心地通过 Shadcn CLI 更新“RTL 更新组件”，因为这些改动主要是为了 RTL 兼容性。而“已修改组件”可能还包含其它自定义内容，需要留意。
 
-### Modified Components
+### 已修改组件
 
 - scroll-area
 - sonner
 - separator
 
-### RTL Updated Components
+### RTL 更新组件
 
 - alert-dialog
 - calendar
@@ -49,71 +49,53 @@ If you want to update components using the Shadcn CLI (e.g., `npx shadcn@latest 
 - sidebar
 - switch
 
-**Notes:**
+**说明：**
 
-- **Modified Components**: These have general updates, potentially including RTL adjustments.
-- **RTL Updated Components**: These have specific changes for RTL language support (e.g., layout, positioning).
-- For implementation details, check the source files in `src/components/ui/`.
-- All other Shadcn UI components in the project are standard and can be safely updated via the CLI.
+- **已修改组件**：包含一般性更新，可能也包括 RTL 调整。
+- **RTL 更新组件**：针对 RTL 语言支持（如布局、定位）所做的特定修改。
+- 实现细节请查看 `src/components/ui/` 目录下的源文件。
+- 项目中其余的 Shadcn UI 组件均为标准版本，可以放心通过 CLI 更新。
 
 </details>
 
-## Tech Stack
+## 技术栈
 
-**UI:** [ShadcnUI](https://ui.shadcn.com) (TailwindCSS + RadixUI)
+**UI：** [ShadcnUI](https://ui.shadcn.com)（TailwindCSS + RadixUI）
 
-**Build Tool:** [Vite](https://vitejs.dev/)
+**构建工具：** [Vite](https://vitejs.dev/)
 
-**Routing:** [TanStack Router](https://tanstack.com/router/latest)
+**路由：** [TanStack Router](https://tanstack.com/router/latest)
 
-**Type Checking:** [TypeScript](https://www.typescriptlang.org/)
+**类型检查：** [TypeScript](https://www.typescriptlang.org/)
 
-**Linting/Formatting:** [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+**代码检查 / 格式化：** [ESLint](https://eslint.org/) 与 [Prettier](https://prettier.io/)
 
-**Icons:** [Lucide Icons](https://lucide.dev/icons/), [Tabler Icons](https://tabler.io/icons) (Brand icons only)
+**图标：** [Lucide Icons](https://lucide.dev/icons/)、[Tabler Icons](https://tabler.io/icons)（仅品牌图标）
 
-**Auth (partial):** [Clerk](https://go.clerk.com/GttUAaK)
+**鉴权（部分）：** [Clerk](https://go.clerk.com/GttUAaK)
 
-## Run Locally
+## 本地运行
 
-Clone the project
+克隆项目
 
 ```bash
   git clone https://github.com/huangzi959/zh-admin.git
 ```
 
-Go to the project directory
+进入项目目录
 
 ```bash
   cd zh-admin
 ```
 
-Install dependencies
+安装依赖
 
 ```bash
   pnpm install
 ```
 
-Start the server
+启动服务
 
 ```bash
   pnpm run dev
 ```
-
-## Sponsoring this project ❤️
-
-If you find this project helpful or use this in your own work, consider [sponsoring me](https://github.com/sponsors/satnaing) to support development and maintenance. You can [buy me a coffee](https://buymeacoffee.com/satnaing) as well. Don’t worry, every penny helps. Thank you! 🙏
-
-For questions or sponsorship inquiries, feel free to reach out at [satnaingdev@gmail.com](mailto:satnaingdev@gmail.com).
-
-### Current Sponsor
-
-- [Clerk](https://go.clerk.com/GttUAaK) - authentication and user management for the modern web
-
-## Author
-
-Crafted with 🤍 by [@satnaing](https://github.com/satnaing)
-
-## License
-
-Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
