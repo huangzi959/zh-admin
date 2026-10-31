@@ -2,9 +2,8 @@
 
 基于 Shadcn 与 Vite 打造的后台管理仪表盘 UI，在设计时充分考虑了响应式布局与无障碍访问。
 
-![示意图](public/images/shadcn-admin.png)
+![示意图](https://img.alicdn.com/bao/uploaded/i2/O1CN01hwq6abkBZeE2VLAJ_!!591495956-2-fleamarket.png_.webp)
 
-[![由 Clerk 赞助](https://img.shields.io/badge/Sponsored%20by-Clerk-5b6ee1?logo=clerk)](https://go.clerk.com/GttUAaK)
 
 我在工作和个人的项目中一直都在做仪表盘类的 UI。我一直想做一套可复用的仪表盘 UI 组件库，方便以后的项目直接使用；现在它终于完成了。虽然我自己编写了一些自定义组件，但其中部分代码是直接参考 ShadcnUI 官方示例改编而来的。
 
