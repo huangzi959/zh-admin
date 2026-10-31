@@ -75,7 +75,7 @@ describe('PasswordInput', () => {
               name='password'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>密码</FormLabel>
                   <FormControl>
                     <PasswordInput {...field} />
                   </FormControl>
@@ -89,7 +89,7 @@ describe('PasswordInput', () => {
 
     const { getByLabelText } = await render(<PasswordInLabeledForm />)
 
-    const password = getByLabelText(/^Password$/i)
+    const password = getByLabelText(/^密码$/i)
     await expect.element(password).toHaveAttribute('type', 'password')
 
     await userEvent.type(password, 'secret-value')

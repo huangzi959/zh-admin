@@ -95,16 +95,16 @@ export function Apps() {
       <Main fixed>
         <div>
           <h1 className='text-2xl font-bold tracking-tight'>
-            App Integrations
+            应用集成
           </h1>
           <p className='text-muted-foreground'>
-            Here&apos;s a list of your apps for the integration!
+            以下是你已接入的应用列表！
           </p>
         </div>
         <div className='my-4 flex items-end justify-between sm:my-0 sm:items-center'>
           <div className='flex flex-col gap-4 sm:my-4 sm:flex-row'>
             <Input
-              placeholder='Filter apps...'
+              placeholder='筛选应用...'
               className='h-9 w-40 lg:w-62.5'
               value={searchTerm}
               onChange={handleSearch}
@@ -114,9 +114,9 @@ export function Apps() {
                 <SelectValue>{appText.get(appType)}</SelectValue>
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value='all'>All Apps</SelectItem>
-                <SelectItem value='connected'>Connected</SelectItem>
-                <SelectItem value='notConnected'>Not Connected</SelectItem>
+                <SelectItem value='all'>全部应用</SelectItem>
+                <SelectItem value='connected'>已连接</SelectItem>
+                <SelectItem value='notConnected'>未连接</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -131,13 +131,13 @@ export function Apps() {
               <SelectItem value='asc'>
                 <div className='flex items-center gap-4'>
                   <ArrowUpAZ size={16} />
-                  <span>Ascending</span>
+                  <span>升序</span>
                 </div>
               </SelectItem>
               <SelectItem value='desc'>
                 <div className='flex items-center gap-4'>
                   <ArrowDownAZ size={16} />
-                  <span>Descending</span>
+                  <span>降序</span>
                 </div>
               </SelectItem>
             </SelectContent>

@@ -6,17 +6,17 @@ import { type User } from '../data/schema'
 import { UsersActionDialog } from './users-action-dialog'
 
 const VALIDATION_MESSAGES = {
-  firstName: 'First Name is required.',
-  lastName: 'Last Name is required.',
-  username: 'Username is required.',
-  phoneNumber: 'Phone number is required.',
-  email: 'Email is required.',
-  role: 'Role is required.',
-  password: 'Password is required.',
-  passwordMismatch: "Passwords don't match.",
-  passwordLength: 'Password must be at least 8 characters long.',
-  passwordNumber: 'Password must contain at least one number.',
-  passwordLowercase: 'Password must contain at least one lowercase letter.',
+  firstName: '名字为必填项。',
+  lastName: '姓氏为必填项。',
+  username: '用户名为必填项。',
+  phoneNumber: '手机号为必填项。',
+  email: '邮箱为必填项。',
+  role: '角色为必填项。',
+  password: '密码不能为空。',
+  passwordMismatch: "两次输入的密码不一致。",
+  passwordLength: '密码长度至少为 8 个字符。',
+  passwordNumber: '密码必须包含至少一个数字。',
+  passwordLowercase: '密码必须包含至少一个小写字母。',
 } as const
 
 const MOCK_USER: User = {
@@ -45,7 +45,7 @@ describe('UsersActionDialog', () => {
 
       const title = getByRole('heading', {
         level: 2,
-        name: /Add New User/i,
+        name: /新增用户/i,
       })
       const description = getByText(
         /Create new user here. Click save when you're done./i
@@ -91,9 +91,9 @@ describe('UsersActionDialog', () => {
         <UsersActionDialog open onOpenChange={vi.fn()} />
       )
 
-      const password = getByRole('textbox', { name: /^Password$/i })
+      const password = getByRole('textbox', { name: /^密码$/i })
       const confirmPassword = getByRole('textbox', {
-        name: /Confirm Password/i,
+        name: /确认密码/i,
       })
       await expect.element(confirmPassword).toBeDisabled()
 
@@ -106,9 +106,9 @@ describe('UsersActionDialog', () => {
         <UsersActionDialog open onOpenChange={vi.fn()} />
       )
 
-      const password = getByRole('textbox', { name: /^Password$/i })
+      const password = getByRole('textbox', { name: /^密码$/i })
       const confirmPassword = getByRole('textbox', {
-        name: /Confirm Password/i,
+        name: /确认密码/i,
       })
       await userEvent.type(password, 'a')
       await userEvent.type(confirmPassword, 'b')
@@ -192,7 +192,7 @@ describe('UsersActionDialog', () => {
 
       const title = getByRole('heading', {
         level: 2,
-        name: /Edit User/i,
+        name: /编辑用户/i,
       })
       const description = getByText(
         /Update the user here\. Click save when you're done\./i
@@ -237,9 +237,9 @@ describe('UsersActionDialog', () => {
         <UsersActionDialog open onOpenChange={vi.fn()} currentRow={MOCK_USER} />
       )
 
-      const password = getByRole('textbox', { name: /^Password$/i })
+      const password = getByRole('textbox', { name: /^密码$/i })
       const confirmPassword = getByRole('textbox', {
-        name: /Confirm Password/i,
+        name: /确认密码/i,
       })
 
       await userEvent.fill(password, 'S3cur3P@ssw0rd')
@@ -325,10 +325,10 @@ async function fillRequiredProfileFields(
     await user.fill(el, value)
   }
 
-  const roleSelect = screen.getByRole('combobox', { name: /Role/i })
+  const roleSelect = screen.getByRole('combobox', { name: /角色/i })
   await user.click(roleSelect)
   await user.click(
-    screen.getByRole('option', { name: overrides?.roleOption ?? 'Superadmin' })
+    screen.getByRole('option', { name: overrides?.roleOption ?? '超级管理员' })
   )
 }
 
@@ -338,8 +338,8 @@ async function fillPasswords(
   a: string,
   b: string
 ) {
-  const password = screen.getByLabelText(/^Password$/i)
-  const confirmPassword = screen.getByLabelText(/^Confirm Password$/i)
+  const password = screen.getByLabelText(/^密码$/i)
+  const confirmPassword = screen.getByLabelText(/^确认密码$/i)
   await user.fill(password, a)
   await user.fill(confirmPassword, b)
 }

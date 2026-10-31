@@ -12,39 +12,38 @@ export function SignIn2() {
         <div className='mx-auto flex w-full flex-col justify-center space-y-2 py-8 sm:w-120 sm:p-8'>
           <div className='mb-4 flex items-center justify-center'>
             <Logo className='me-2' />
-            <h1 className='text-xl font-medium'>Shadcn Admin</h1>
+            <h1 className='text-xl font-medium'>zh-Admin</h1>
           </div>
         </div>
         <div className='mx-auto flex w-full max-w-sm flex-col justify-center space-y-2'>
           <div className='flex flex-col space-y-2 text-start'>
-            <h2 className='text-lg font-semibold tracking-tight'>Sign in</h2>
+            <h2 className='text-lg font-semibold tracking-tight'>登录</h2>
             <p className='text-sm text-muted-foreground'>
-              Enter your email and password below to log into{' '}
-              <br className='max-sm:hidden' /> your account. Don't have an
-              account?{' '}
+              在下方输入邮箱和密码以登录{' '}
+              <br className='max-sm:hidden' /> 你的账户。还没有账户？{' '}
               <Link
                 to='/sign-up'
                 className='text-nowrap underline underline-offset-4 hover:text-primary'
               >
-                Sign Up
+                注册
               </Link>
             </p>
           </div>
           <UserAuthForm />
           <p className='px-8 text-center text-sm text-muted-foreground'>
-            By clicking sign in, you agree to our{' '}
+            点击登录即表示你同意我们的{' '}
             <a
               href='/terms'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Terms of Service
+              服务条款
             </a>{' '}
-            and{' '}
+            和{' '}
             <a
               href='/privacy'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Privacy Policy
+              隐私政策
             </a>
             .
           </p>

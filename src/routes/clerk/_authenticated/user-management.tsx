@@ -57,10 +57,10 @@ function UserManagement() {
       <Main className='flex flex-1 flex-col gap-4 sm:gap-6'>
         <div className='flex flex-wrap items-end justify-between gap-2'>
           <div>
-            <h2 className='text-2xl font-bold tracking-tight'>User List</h2>
+            <h2 className='text-2xl font-bold tracking-tight'>用户列表</h2>
             <div className='flex gap-1'>
               <p className='text-muted-foreground'>
-                Manage your users and their roles here.
+                在此管理你的用户及其角色。
               </p>
               <LearnMore
                 open={opened}
@@ -68,7 +68,7 @@ function UserManagement() {
                 contentProps={{ side: 'right' }}
               >
                 <p>
-                  This is the same as{' '}
+                  这与{' '}
                   <Link
                     to='/users'
                     className='text-blue-500 underline decoration-dashed underline-offset-2'
@@ -78,8 +78,7 @@ function UserManagement() {
                 </p>
 
                 <p className='mt-4'>
-                  You can sign out or manage/delete your account via the User
-                  Profile menu in the top-right corner of the page.
+                  你可以通过页面右上角的用户资料菜单退出登录或管理/删除账户。
                   <ExternalLink className='inline-block size-4' />
                 </p>
               </LearnMore>
@@ -124,13 +123,13 @@ function Unauthorized() {
     <div className='h-svh'>
       <div className='m-auto flex h-full w-full flex-col items-center justify-center gap-2'>
         <h1 className='text-[7rem] leading-tight font-bold'>401</h1>
-        <span className='font-medium'>Unauthorized Access</span>
+        <span className='font-medium'>未授权访问</span>
         <p className='text-center text-muted-foreground'>
-          You must be authenticated via Clerk{' '}
+          你必须通过 Clerk 进行身份验证{' '}
           <sup>
             <LearnMore open={opened} onOpenChange={setOpened}>
               <p>
-                This is the same as{' '}
+                这与{' '}
                 <Link
                   to='/users'
                   className='text-blue-500 underline decoration-dashed underline-offset-2'
@@ -139,23 +138,22 @@ function Unauthorized() {
                 </Link>
                 .{' '}
               </p>
-              <p>You must first sign in using Clerk to access this route. </p>
+              <p>你必须先使用 Clerk 登录才能访问此路由。 </p>
 
               <p className='mt-4'>
-                After signing in, you'll be able to sign out or delete your
-                account via the User Profile dropdown on this page.
+                登录后，你可以通过本页的用户资料下拉菜单退出登录或删除账户。
               </p>
             </LearnMore>
           </sup>
           <br />
-          to access this resource.
+          以访问此资源。
         </p>
         <div className='mt-6 flex gap-4'>
           <Button variant='outline' onClick={() => history.go(-1)}>
-            Go Back
+            返回
           </Button>
           <Button onClick={() => navigate({ to: '/clerk/sign-in' })}>
-            <ClerkLogo className='invert' /> Sign in
+            <ClerkLogo className='invert' /> 登录
           </Button>
         </div>
         <div className='mt-4 h-8 text-center'>
@@ -163,11 +161,11 @@ function Unauthorized() {
             <>
               <p>
                 {countdown > 0
-                  ? `Redirecting to Sign In page in ${countdown}s`
+                  ? `${countdown} 秒后跳转至登录页`
                   : `Redirecting...`}
               </p>
               <Button variant='link' onClick={() => setCancelled(true)}>
-                Cancel Redirect
+                取消跳转
               </Button>
             </>
           )}

@@ -18,7 +18,7 @@ function ClerkAuthLayout() {
           className='relative z-20 flex items-center text-lg font-medium'
         >
           <Logo className='me-2' />
-          Shadcn Admin
+          zh-Admin
         </Link>
 
         <ClerkFullLogo className='relative m-auto size-96' />
@@ -26,10 +26,10 @@ function ClerkAuthLayout() {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo; Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sint, magni debitis inventore asperiores velit! &rdquo;
+              &ldquo; 使用 Shadcn 与 Vite 构建的现代化后台管理界面，助你轻松
+              管理任务、用户与数据。 &rdquo;
             </p>
-            <footer className='text-sm'>John Doe</footer>
+            <footer className='text-sm'>管理员</footer>
           </blockquote>
         </div>
       </div>
@@ -42,13 +42,13 @@ function ClerkAuthLayout() {
             }}
             contentProps={{ side: 'top', align: 'end', className: 'w-auto' }}
           >
-            Welcome to the example Clerk auth page. <br />
-            Back to{' '}
+            欢迎使用 Clerk 认证示例页。 <br />
+            返回{' '}
             <Link
               to='/'
               className='underline decoration-dashed underline-offset-2'
             >
-              Dashboard
+              仪表盘
             </Link>{' '}
             ?
           </LearnMore>
